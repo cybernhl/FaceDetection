@@ -1,0 +1,6 @@
+[submodule "FaceDetection_xGonZh10n"]
+	path = FaceDetection_xGonZh10n
+	url = git@github.com:cybernhl/FaceDetection_xGonZh10n.git
+[submodule "vision-quickstart"]
+	path = vision-quickstart
+	url = git@github.com:cybernhl/vision-quickstart.git

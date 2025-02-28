@@ -1,0 +1,41 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        mavenCentral()
+        google {
+            content {
+                includeGroupByRegex("com\\.android.*")
+                includeGroupByRegex("com\\.google.*")
+                includeGroupByRegex("androidx.*")
+            }
+        }
+        maven { url 'https://jitpack.io' }
+        maven { url 'https://www.dfki.uni-kl.de/artifactory/libs-releases/' }
+        maven { url 'https://s3.amazonaws.com/repo.commonsware.com' }
+        maven { url 'https://maven.pkg.jetbrains.space/public/p/compose/dev' }
+        maven { url 'https://jogamp.org/deployment/maven' }
+        maven { url 'https://raw.githubusercontent.com/cybernhl/maven-repository/master/' }
+        mavenLocal()
+    }
+}
+dependencyResolutionManagement {
+    repositories {
+        mavenCentral()
+        google()
+        maven { url 'https://jitpack.io' }
+        maven { url 'https://www.dfki.uni-kl.de/artifactory/libs-releases/' }
+        maven { url 'https://s3.amazonaws.com/repo.commonsware.com' }
+        maven { url 'https://maven.pkg.jetbrains.space/public/p/compose/dev' }
+        maven { url 'https://jogamp.org/deployment/maven' }
+        maven { url 'https://raw.githubusercontent.com/cybernhl/maven-repository/master/' }
+        mavenLocal()
+    }
+}
+
+rootProject.name = "FaceDetection"
+include(":facedetec_by_ml")
+project(":facedetec_by_ml").projectDir = file("./vision-quickstart/mlkit/android/vision-quickstart/app")
+include(":FaceDetection_xGonZh10n")
+project(":FaceDetection_xGonZh10n").projectDir = file("./FaceDetection_xGonZh10n/app")
+include(":opencv_face_detect")
+project(":opencv_face_detect").projectDir = file("./FaceDetection_xGonZh10n/opencv_face_detect")
